@@ -1,0 +1,17 @@
+{
+    "products": [{
+        "id": "1",
+        "name": "Alan Wake",
+        "price": 39.99
+    },
+    {
+        "id": "2",
+        "name": "Alan Wake",
+        "price": 39.99
+    },
+    {
+        "id": "3",
+        "name": "Alan Wake",
+        "price": 39.99
+    }]
+}
