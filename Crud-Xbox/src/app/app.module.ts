@@ -1,31 +1,42 @@
-import { MatSnackBar } from '@angular/material/snack-bar';
-import { NgModule } from "@angular/core";
+import { LOCALE_ID, NgModule } from "@angular/core";
 import { BrowserModule } from "@angular/platform-browser";
 
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
+
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+
+import { FooterComponent } from "./components/templates/footer/footer.component";
+import { FormsModule } from "@angular/forms";
+
 import { HeaderComponent } from "./components/templates/header/header.component";
+import { HomeComponent } from "./views/home/home.component";
+import { HttpClientModule } from "@angular/common/http";
 
 import { MatToolbarModule } from "@Angular/Material/toolbar";
-import { FooterComponent } from "./components/templates/footer/footer.component";
-import { NavComponent } from "./components/templates/nav/nav.component";
-
 import { MatSidenavModule } from "@angular/material/sidenav";
 import { MatCardModule } from "@angular/material/card";
 import { MatListModule } from "@angular/material/list";
-import { HomeComponent } from "./views/home/home.component";
-import { RedDirective } from './directives/red.directive';
-import { ProductCreateComponent } from './components/Product/product-create/product-create.component';
-import { ProductCrudComponent } from "./views/product-crud/product-crud.component";
 import { MatButtonModule } from "@angular/material/button";
 import { MatSnackBarModule } from "@angular/material/snack-bar";
+import { MatTableModule } from "@angular/material/table";
+import { MatSortModule } from "@angular/material/sort";
+import { MatFormFieldModule } from "@angular/material/form-field";
+import { MatInputModule } from "@angular/material/input";
 
-import { HttpClientModule } from "@angular/common/http";
-import { FormsModule } from '@angular/forms';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatInputModule } from '@angular/material/input';
-import { ProductReadComponent } from './components/product/product-read/product-read.component';
+import { NavComponent } from "./components/templates/nav/nav.component";
+
+import { RedDirective } from "./directives/red.directive";
+import { registerLocaleData } from "@angular/common";
+
+import { ProductCrudComponent } from "./components/Product/product-crud.component";
+import { ProductReadComponent } from "./components/Product/product-read/product-read.component";
+import { ProductUpdateComponent } from "./components/Product/product-update/product-update.component";
+import { ProductDeletComponent } from "./components/Product/product-delet/product-delet.component";
+import { ProductCreateComponent } from "./components/Product/product-create/product-create.component";
+import localePt from "@angular/common/locales/pt";
+
+registerLocaleData(localePt);
 
 // import { ForDirective } from './directives/for.directive';
 
@@ -36,10 +47,13 @@ import { ProductReadComponent } from './components/product/product-read/product-
     FooterComponent,
     NavComponent,
     HomeComponent,
-    ProductCrudComponent,    
+    ProductCrudComponent,
     RedDirective,
     ProductCreateComponent,
-    ProductReadComponent
+    ProductReadComponent,
+    ProductUpdateComponent,
+    ProductDeletComponent,
+
     // ForDirective,
   ],
   imports: [
@@ -55,9 +69,16 @@ import { ProductReadComponent } from './components/product/product-read/product-
     HttpClientModule,
     FormsModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    MatTableModule,
+    MatSortModule,
   ],
-  providers: [],
+  providers: [
+    {
+      provide: LOCALE_ID,
+      useValue: "pt-BR",
+    },
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
