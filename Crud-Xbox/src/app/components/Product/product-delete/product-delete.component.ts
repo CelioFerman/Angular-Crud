@@ -1,14 +1,14 @@
+import { ActivatedRoute, Route, Router } from "@angular/router";
 import { ProductService } from "src/app/Services/product.service";
+import { Product } from "./../product-create/product.model";
 import { Component, OnInit } from "@angular/core";
-import { ActivatedRoute, Router } from "@angular/router";
-import { Product } from "../product-create/product.model";
 
 @Component({
-  selector: "app-product-update",
-  templateUrl: "./product-update.component.html",
-  styleUrls: ["./product-update.component.scss"],
+  selector: "app-product-delet",
+  templateUrl: "product-delete.component.html",
+  styleUrls: ["./product-delete.component.scss"],
 })
-export class ProductUpdateComponent implements OnInit {
+export class ProductDeleteComponent implements OnInit {
   product: Product = {
     name: "",
     price: null,
@@ -29,9 +29,9 @@ export class ProductUpdateComponent implements OnInit {
     }
   }
 
-  updateProduct(): void {
-    this.productService.update(this.product).subscribe(() => {
-      this.productService.showMessage("Produto Atualizado com sucesso!");
+  deleteProduct(): void {
+    this.productService.delete(this.product.id!).subscribe(() => {
+      this.productService.showMessage("Produto excluido com sucesso");
       this.router.navigate(["/products"]);
     });
   }
@@ -39,4 +39,8 @@ export class ProductUpdateComponent implements OnInit {
   cancel(): void {
     this.router.navigate(["/products"]);
   }
+}
+
+function deleteProduct() {
+  throw new Error("Function not implemented.");
 }

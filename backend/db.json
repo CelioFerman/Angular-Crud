@@ -1,24 +1,14 @@
 {
   "products": [
     {
-      "id": "1",
-      "name": "Alan Wake",
-      "price": 39.99
-    },
-    {
-      "id": "2",
-      "name": "Alan Wake",
-      "price": 39.99
-    },
-    {
       "id": "3",
       "name": "Alan Wake",
-      "price": 39.99
+      "price": "79.00"
     },
     {
       "id": "4",
       "name": "Dragon ball Ragin Blast 2",
-      "price": "69,99"
+      "price": "70"
     },
     {
       "id": "5",
@@ -26,24 +16,9 @@
       "price": "169.90"
     },
     {
-      "id": "6",
-      "name": "Forza Horizon 2",
-      "price": "250.00"
-    },
-    {
-      "id": "7",
-      "name": "BattleField 3",
-      "price": "39,99"
-    },
-    {
-      "id": "8",
-      "name": "Novo produto",
-      "price": "10.00"
-    },
-    {
-      "id": "4a2e",
-      "name": "Dirt 3",
-      "price": "100.00"
+      "id": "e5f4",
+      "name": "Mortal Kombat Komplet Edition",
+      "price": "79.90"
     }
   ]
 }

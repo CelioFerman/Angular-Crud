@@ -32,8 +32,9 @@ import { registerLocaleData } from "@angular/common";
 import { ProductCrudComponent } from "./components/Product/product-crud.component";
 import { ProductReadComponent } from "./components/Product/product-read/product-read.component";
 import { ProductUpdateComponent } from "./components/Product/product-update/product-update.component";
-import { ProductDeletComponent } from "./components/Product/product-delet/product-delet.component";
 import { ProductCreateComponent } from "./components/Product/product-create/product-create.component";
+import { ProductDeleteComponent } from "./components/Product/product-delete/product-delete.component";
+
 import localePt from "@angular/common/locales/pt";
 
 registerLocaleData(localePt);
@@ -52,7 +53,7 @@ registerLocaleData(localePt);
     ProductCreateComponent,
     ProductReadComponent,
     ProductUpdateComponent,
-    ProductDeletComponent,
+    ProductDeleteComponent,
 
     // ForDirective,
   ],

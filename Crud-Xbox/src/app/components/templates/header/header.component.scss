@@ -3,30 +3,26 @@
   align-items: center;
 }
 
-
 .logo {
-   display: flex;
-    flex-direction: column;
-    align-self: center;
-    max-height: 70px;
-    max-width: 90px;
-    
-  }
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  max-height: 70px;
+  max-width: 90px;
+}
 
-  .contaiber-header {
-    display: flex;
-    align-items: center;
-  }
-  
-  .header .game-logo {
-    display: contents;
-    align-items: center;
-    text-decoration: none;
-  }
+.contaiber-header {
+  display: flex;
+  align-items: center;
+}
+
+.header .game-logo {
+  display: contents;
+  align-items: center;
+  text-decoration: none;
+}
 
 .header .title i {
   display: contents;
   padding-right: 5px;
 }
-
-

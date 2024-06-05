@@ -4,7 +4,7 @@ import { HomeComponent } from "./views/home/home.component";
 import { ProductCrudComponent } from "./components/Product/product-crud.component";
 import { ProductCreateComponent } from "./components/Product/product-create/product-create.component";
 import { ProductUpdateComponent } from "./components/Product/product-update/product-update.component";
-import { ProductDeletComponent } from "./components/Product/product-delet/product-delet.component";
+import { ProductDeleteComponent } from "./components/Product/product-delete/product-delete.component";
 
 const routes: Routes = [
   {
@@ -15,15 +15,9 @@ const routes: Routes = [
     path: "products",
     component: ProductCrudComponent,
   },
-  {path: "products/create",
-    component: ProductCreateComponent
-  },
-  {path: "products/update/:id",
-    component: ProductUpdateComponent
-  },
-  {path: "products/delete/:id",
-    component: ProductDeletComponent
-  }
+  { path: "products/create", component: ProductCreateComponent },
+  { path: "products/update/:id", component: ProductUpdateComponent },
+  { path: "products/delete/:id", component: ProductDeleteComponent },
 ];
 
 @NgModule({
