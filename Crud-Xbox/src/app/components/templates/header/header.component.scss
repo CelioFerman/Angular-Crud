@@ -3,12 +3,17 @@
   align-items: center;
 }
 
+a{
+  color: #000;
+}
+
 .logo {
   display: flex;
   flex-direction: column;
   align-self: center;
   max-height: 70px;
   max-width: 90px;
+  
 }
 
 .contaiber-header {
@@ -20,9 +25,11 @@
   display: contents;
   align-items: center;
   text-decoration: none;
+  
 }
 
 .header .title i {
   display: contents;
   padding-right: 5px;
+  color: #000;
 }
